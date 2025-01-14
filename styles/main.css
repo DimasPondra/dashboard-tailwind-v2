@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+h1 {
+  @apply text-3xl font-bold;
+}
+
+h2 {
+  @apply text-2xl font-bold;
+}
+
+h3 {
+  @apply text-xl font-bold;
+}
+
+h4 {
+  @apply text-lg font-bold;
+}
+
+h5 {
+  @apply text-base font-bold;
+}
+
+h6 {
+  @apply text-sm font-bold;
+}
+
+@layer components {
+  .btn {
+    @apply text-custom-white font-semibold rounded-lg;
+  }
+  .btn.btn-small {
+    @apply text-sm px-16 py-3;
+  }
+  .btn.btn-normal {
+    @apply text-base px-20 py-4;
+  }
+  .btn.btn-large {
+    @apply text-lg px-24 py-5;
+  }
+  .btn.btn-primary {
+    @apply bg-custom-blue hover:bg-custom-blue-hover;
+  }
+  .btn.btn-warning {
+    @apply bg-custom-orange hover:bg-custom-orange-hover;
+  }
+  .btn.btn-success {
+    @apply bg-green-400 hover:bg-green-500;
+  }
+  .btn.btn-danger {
+    @apply bg-red-400 hover:bg-red-500;
+  }
+  .btn.btn-secondary {
+    @apply bg-gray-400 hover:bg-gray-500;
+  }
+  .btn.btn-info {
+    @apply bg-cyan-400 hover:bg-cyan-500;
+  }
+  .btn.btn-violet {
+    @apply bg-violet-400 hover:bg-violet-500;
+  }
+  .btn.btn-outline-primary {
+    @apply border-custom-blue-hover border-2 hover:bg-custom-blue text-custom-blue-hover hover:text-custom-white;
+  }
+  .btn.btn-outline-warning {
+    @apply border-custom-orange-hover border-2 hover:bg-custom-orange text-custom-orange-hover hover:text-custom-white;
+  }
+  .btn.btn-outline-success {
+    @apply border-green-500 border-2 hover:bg-green-400 text-green-500 hover:text-custom-white;
+  }
+  .btn.btn-outline-danger {
+    @apply border-red-500 border-2 hover:bg-red-400 text-red-500 hover:text-custom-white;
+  }
+  .btn.btn-outline-secondary {
+    @apply border-gray-500 border-2 hover:bg-gray-400 text-gray-500 hover:text-custom-white;
+  }
+  .btn.btn-outline-info {
+    @apply border-cyan-500 border-2 hover:bg-cyan-400 text-cyan-500 hover:text-custom-white;
+  }
+  .btn.btn-outline-violet {
+    @apply border-violet-500 border-2 hover:bg-violet-400 text-violet-500 hover:text-custom-white;
+  }
+  .btn.btn-icon {
+    @apply flex-row gap-2 items-center;
+  }
+  .btn.btn-icon img {
+    @apply size-4;
+  }
+}
+body {
+  @apply bg-custom-light text-custom-black dark:bg-custom-dark dark:text-custom-white;
+}/*# sourceMappingURL=main.css.map */

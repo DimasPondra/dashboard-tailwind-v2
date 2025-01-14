@@ -1,0 +1,8 @@
+@use "./components/library.scss";
+
+@use "./components/heading.scss";
+@use "./components/button.scss";
+
+body {
+    @apply bg-custom-light text-custom-black dark:bg-custom-dark dark:text-custom-white;
+}
