@@ -1,0 +1,28 @@
+@use "./library.scss";
+
+@layer components {
+    .title,
+    .paragraph {
+        @apply text-base;
+
+        &.small {
+            @apply text-sm;
+        }
+
+        &.large {
+            @apply text-lg;
+        }
+
+        &.extra-large {
+            @apply text-2xl;
+        }
+
+        &.bold {
+            @apply font-bold;
+        }
+
+        &.light {
+            @apply font-light;
+        }
+    }
+}

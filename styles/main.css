@@ -26,6 +26,32 @@ h6 {
 }
 
 @layer components {
+  .title,
+  .paragraph {
+    @apply text-base;
+  }
+  .title.small,
+  .paragraph.small {
+    @apply text-sm;
+  }
+  .title.large,
+  .paragraph.large {
+    @apply text-lg;
+  }
+  .title.extra-large,
+  .paragraph.extra-large {
+    @apply text-2xl;
+  }
+  .title.bold,
+  .paragraph.bold {
+    @apply font-bold;
+  }
+  .title.light,
+  .paragraph.light {
+    @apply font-light;
+  }
+}
+@layer components {
   .btn {
     @apply text-custom-white font-semibold rounded-lg;
   }
