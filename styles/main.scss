@@ -3,6 +3,7 @@
 @use "./components/heading.scss";
 @use "./components/body.scss";
 @use "./components/button.scss";
+@use "./components/form.scss";
 
 body {
     @apply bg-custom-light text-custom-black dark:bg-custom-dark dark:text-custom-white;

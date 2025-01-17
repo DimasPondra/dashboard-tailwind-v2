@@ -113,6 +113,34 @@ h6 {
     @apply size-4;
   }
 }
+.form-group {
+  @apply flex flex-col gap-2;
+}
+.form-group .form-base {
+  @apply bg-slate-100 dark:bg-custom-black border-2 border-slate-100 dark:border-violet-500 text-sm px-7 py-3 rounded-xl;
+}
+.form-group .form-input {
+  @apply focus:outline-none focus:border-custom-blue dark:focus:border-violet-400;
+}
+.form-group .select-group {
+  @apply flex flex-col;
+}
+.form-group .select-group .form-select {
+  @apply flex justify-between items-center  cursor-pointer;
+}
+.form-group .select-group .form-select .select-text {
+  @apply cursor-text;
+}
+.form-group .select-group .select-option {
+  @apply bg-slate-100 dark:bg-custom-black border-2 border-custom-blue dark:border-violet-500 text-sm p-4 mt-1 rounded-xl;
+}
+.form-group .select-group .select-option ul {
+  @apply flex flex-col w-full;
+}
+.form-group .select-group .select-option ul li {
+  @apply py-2 px-4 rounded-lg hover:bg-slate-200 dark:hover:bg-custom-dark cursor-pointer;
+}
+
 body {
   @apply bg-custom-light text-custom-black dark:bg-custom-dark dark:text-custom-white;
 }/*# sourceMappingURL=main.css.map */

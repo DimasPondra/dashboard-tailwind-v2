@@ -1,0 +1,37 @@
+@use "./library.scss";
+
+.form-group {
+    @apply flex flex-col gap-2;
+
+    .form-base {
+        @apply bg-slate-100 dark:bg-custom-black border-2 border-slate-100 dark:border-violet-500 text-sm px-7 py-3 rounded-xl;
+    }
+
+    .form-input {
+        @apply focus:outline-none focus:border-custom-blue dark:focus:border-violet-400;
+    }
+
+    .select-group {
+        @apply flex flex-col;
+
+        .form-select {
+            @apply flex justify-between items-center  cursor-pointer;
+
+            .select-text {
+                @apply cursor-text;
+            }
+        }
+
+        .select-option {
+            @apply bg-slate-100 dark:bg-custom-black border-2 border-custom-blue dark:border-violet-500 text-sm p-4 mt-1 rounded-xl;
+
+            ul {
+                @apply flex flex-col w-full;
+
+                li {
+                    @apply py-2 px-4 rounded-lg hover:bg-slate-200 dark:hover:bg-custom-dark cursor-pointer;
+                }
+            }
+        }
+    }
+}
