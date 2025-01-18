@@ -808,22 +808,6 @@ video {
   height: 1rem;
 }
 
-.absolute {
-  position: absolute;
-}
-
-.relative {
-  position: relative;
-}
-
-.z-0 {
-  z-index: 0;
-}
-
-.z-50 {
-  z-index: 50;
-}
-
 .flex {
   display: flex;
 }
@@ -841,32 +825,12 @@ video {
   width: 20rem;
 }
 
-.cursor-default {
-  cursor: default;
+.cursor-auto {
+  cursor: auto;
 }
 
 .cursor-none {
   cursor: none;
-}
-
-.cursor-move {
-  cursor: move;
-}
-
-.cursor-wait {
-  cursor: wait;
-}
-
-.cursor-not-allowed {
-  cursor: not-allowed;
-}
-
-.cursor-no-drop {
-  cursor: no-drop;
-}
-
-.cursor-auto {
-  cursor: auto;
 }
 
 .select-text {
@@ -909,6 +873,10 @@ video {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.text-wrap {
+  text-wrap: wrap;
 }
 
 .text-nowrap {
@@ -970,6 +938,11 @@ h6 {
   gap: 0.5rem;
 }
 
+.form-group.checkbox-group {
+  flex-direction: row;
+  align-items: center;
+}
+
 .form-group .form-base {
   border-radius: 0.75rem;
   border-width: 2px;
@@ -992,16 +965,54 @@ h6 {
   background-color: rgb(65 68 75 / var(--tw-bg-opacity, 1));
 }
 
-.form-group .form-input:focus {
+.form-group .form-input:focus,
+.form-group .form-textarea:focus {
   --tw-border-opacity: 1;
   border-color: rgb(41 95 152 / var(--tw-border-opacity, 1));
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
 
-.form-group .form-input:focus:where(.dark, .dark *) {
+.form-group .form-input:focus:where(.dark, .dark *),
+.form-group .form-textarea:focus:where(.dark, .dark *) {
   --tw-border-opacity: 1;
   border-color: rgb(167 139 250 / var(--tw-border-opacity, 1));
+}
+
+.form-group .form-checkbox {
+  width: 1.25rem;
+  height: 1.25rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0.375rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(226 232 240 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(241 245 249 / var(--tw-bg-opacity, 1));
+}
+
+.form-group .form-checkbox:checked {
+  border-width: 8px;
+  --tw-border-opacity: 1;
+  border-color: rgb(41 95 152 / var(--tw-border-opacity, 1));
+}
+
+.form-group .form-checkbox:where(.dark, .dark *) {
+  --tw-border-opacity: 1;
+  border-color: rgb(139 92 246 / var(--tw-border-opacity, 1));
+  --tw-bg-opacity: 1;
+  background-color: rgb(65 68 75 / var(--tw-bg-opacity, 1));
+}
+
+.form-group .form-checkbox:checked:where(.dark, .dark *) {
+  --tw-border-opacity: 1;
+  border-color: rgb(139 92 246 / var(--tw-border-opacity, 1));
+}
+
+.form-group input[type=file]::file-selector-button {
+  display: none;
 }
 
 .form-group .select-group {

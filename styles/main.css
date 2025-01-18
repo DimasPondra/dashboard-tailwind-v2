@@ -116,11 +116,21 @@ h6 {
 .form-group {
   @apply flex flex-col gap-2;
 }
+.form-group.checkbox-group {
+  @apply flex-row items-center;
+}
 .form-group .form-base {
   @apply bg-slate-100 dark:bg-custom-black border-2 border-slate-100 dark:border-violet-500 text-sm px-7 py-3 rounded-xl;
 }
-.form-group .form-input {
+.form-group .form-input,
+.form-group .form-textarea {
   @apply focus:outline-none focus:border-custom-blue dark:focus:border-violet-400;
+}
+.form-group .form-checkbox {
+  @apply appearance-none size-5 bg-slate-100 dark:bg-custom-black border border-slate-200 dark:border-violet-500 rounded-md checked:border-custom-blue dark:checked:border-violet-500 checked:border-8;
+}
+.form-group input[type=file]::file-selector-button {
+  @apply hidden;
 }
 .form-group .select-group {
   @apply flex flex-col;
