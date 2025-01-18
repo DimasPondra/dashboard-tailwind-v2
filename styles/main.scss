@@ -6,6 +6,7 @@
 @use "./components/form.scss";
 @use "./components/gallery.scss";
 @use "./components/table.scss";
+@use "./components/card.scss";
 
 body {
     @apply bg-custom-light text-custom-black dark:bg-custom-dark dark:text-custom-white;

@@ -10,11 +10,13 @@ toogleTheme.addEventListener("click", () => {
         htmlThemeClassList.replace("light", "dark");
         toogleTheme.src = "./icons/light.png";
 
-        iconSelect.src = "./icons/arrow-down-circle-white.png";
+        iconSelect === null ??
+            (iconSelect.src = "./icons/arrow-down-circle-white.png");
     } else {
         htmlThemeClassList.replace("dark", "light");
         toogleTheme.src = "./icons/dark.png";
 
-        iconSelect.src = "./icons/arrow-down-circle.png";
+        iconSelect === null ??
+            (iconSelect.src = "./icons/arrow-down-circle.png");
     }
 });

@@ -851,6 +851,98 @@ video {
   background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
 }
 
+.card {
+  display: flex;
+  height: 100%;
+  width: 20rem;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 251 251 / var(--tw-bg-opacity, 1));
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.card:where(.dark, .dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(58 61 67 / var(--tw-bg-opacity, 1));
+}
+
+.card .card-image {
+  height: 18rem;
+  width: 100%;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card .card-image.image-full {
+  height: 24rem;
+}
+
+.card .card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.card .card-body.body-blur {
+  position: absolute;
+  bottom: 0px;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  --tw-backdrop-blur: blur(4px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.card .card-body p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.card .card-body p.small {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.card .card-body p.large {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.card .card-body p.extra-large {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.card .card-body p.bold {
+  font-weight: 700;
+}
+
+.card .card-body p.light {
+  font-weight: 300;
+}
+
+.card .card-body p {
+  height: 6rem;
+  overflow: hidden;
+}
+
+.relative {
+  position: relative;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -912,6 +1004,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-between {
