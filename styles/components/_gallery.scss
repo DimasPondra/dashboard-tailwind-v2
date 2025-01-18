@@ -1,0 +1,11 @@
+@use "./library.scss";
+
+@layer components {
+    .gallery {
+        @apply flex flex-col;
+
+        img {
+            @apply size-60 rounded-lg mb-2 object-cover;
+        }
+    }
+}

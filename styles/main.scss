@@ -4,6 +4,8 @@
 @use "./components/body.scss";
 @use "./components/button.scss";
 @use "./components/form.scss";
+@use "./components/gallery.scss";
+@use "./components/table.scss";
 
 body {
     @apply bg-custom-light text-custom-black dark:bg-custom-dark dark:text-custom-white;

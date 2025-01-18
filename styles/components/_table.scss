@@ -1,0 +1,20 @@
+@use "./library.scss";
+
+@layer components {
+    .table-responsive {
+        @apply overscroll-auto overflow-y-auto;
+
+        table {
+            @apply border w-full;
+
+            th,
+            td {
+                @apply border px-4 py-2;
+            }
+
+            th {
+                @apply bg-slate-100 dark:bg-gray-800;
+            }
+        }
+    }
+}

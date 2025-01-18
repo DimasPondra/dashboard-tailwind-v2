@@ -151,6 +151,29 @@ h6 {
   @apply py-2 px-4 rounded-lg hover:bg-slate-200 dark:hover:bg-custom-dark cursor-pointer;
 }
 
+@layer components {
+  .gallery {
+    @apply flex flex-col;
+  }
+  .gallery img {
+    @apply size-60 rounded-lg mb-2 object-cover;
+  }
+}
+@layer components {
+  .table-responsive {
+    @apply overscroll-auto overflow-y-auto;
+  }
+  .table-responsive table {
+    @apply border w-full;
+  }
+  .table-responsive table th,
+  .table-responsive table td {
+    @apply border px-4 py-2;
+  }
+  .table-responsive table th {
+    @apply bg-slate-100 dark:bg-gray-800;
+  }
+}
 body {
   @apply bg-custom-light text-custom-black dark:bg-custom-dark dark:text-custom-white;
 }/*# sourceMappingURL=main.css.map */
