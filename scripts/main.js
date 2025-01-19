@@ -20,3 +20,12 @@ toogleTheme.addEventListener("click", () => {
             (iconSelect.src = "./icons/arrow-down-circle.png");
     }
 });
+
+const sidebar = document.getElementById("sidebar");
+
+// Toogle Sidebar
+let toogleSidebar = () => {
+    sidebar.classList.contains("hidden")
+        ? sidebar.classList.remove("hidden")
+        : sidebar.classList.add("hidden");
+};

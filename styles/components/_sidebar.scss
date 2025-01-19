@@ -1,0 +1,35 @@
+@use "./library.scss";
+
+@layer components {
+    .sidebar {
+        @apply h-screen absolute bg-none top-0 p-0 sm:p-5 w-full sm:w-80;
+
+        aside {
+            @apply w-auto h-full bg-custom-white dark:bg-custom-black p-5 rounded-lg overflow-y-auto shadow-lg;
+
+            .header-sidebar {
+                @apply flex flex-row gap-8 justify-between items-center mb-10;
+
+                .sidebar-close-btn {
+                    @apply size-5 p-1 bg-custom-blue rounded-full;
+                }
+            }
+
+            .menu-sidebar {
+                @apply mb-6;
+
+                .menu-item {
+                    @apply flex flex-row items-center gap-2 mb-2 p-2 hover:border-r-4 hover:border-custom-blue;
+
+                    &.active {
+                        @apply bg-gradient-to-l from-custom-blue to-65% border-r-4 border-custom-blue rounded-r;
+                    }
+
+                    .icon-item {
+                        @apply size-6 p-1 bg-custom-blue rounded-md;
+                    }
+                }
+            }
+        }
+    }
+}
