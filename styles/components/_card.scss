@@ -2,13 +2,13 @@
 
 @layer components {
     .card {
-        @apply flex flex-col w-80 h-full rounded-lg shadow bg-custom-white dark:bg-custom-dark;
+        @apply flex flex-col w-full sm:w-80 h-full rounded-lg shadow bg-custom-white dark:bg-custom-dark;
 
         .card-image {
             @apply w-full h-72 object-cover rounded-t-lg;
 
             &.image-full {
-                @apply h-96;
+                @apply h-96 rounded-b-lg;
             }
         }
 
@@ -16,7 +16,7 @@
             @apply flex flex-col p-6;
 
             &.body-blur {
-                @apply absolute bottom-0 backdrop-blur-sm text-white;
+                @apply absolute w-full bottom-0 backdrop-blur-sm text-white rounded-b-lg;
             }
 
             p {

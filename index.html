@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Dashboard v2 - Heading</title>
+        <title>Dimboard v1 - Home</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,26 +17,38 @@
         <link rel="stylesheet" href="./styles/output.css" />
     </head>
     <body>
-        <!-- Navbar -->
-        <nav class="p-5">
-            <div
-                class="bg-custom-white dark:bg-custom-black p-5 rounded-2xl flex flex-row justify-between items-center gap-4"
-            >
-                <img
-                    src="./icons/hamburger.png"
-                    alt="icon"
-                    class="size-5 p-1 bg-custom-blue rounded-md"
-                    onclick="toogleSidebar()"
-                />
-                <div class="">navbar</div>
-                <img
-                    src="./icons/dark.png"
-                    alt="icon"
-                    id="toogle-theme"
-                    class="size-4 light"
-                />
-            </div>
-        </nav>
+        <div class="h-screen overflow-y-auto overscroll-auto">
+            <!-- Navbar -->
+            <nav class="p-5">
+                <div
+                    class="bg-custom-white dark:bg-custom-black p-5 rounded-2xl flex flex-row justify-between items-center gap-4"
+                >
+                    <img
+                        src="./icons/hamburger.png"
+                        alt="icon"
+                        class="size-5 p-1 bg-custom-blue rounded-md"
+                        onclick="toogleSidebar()"
+                    />
+                    <div class="">navbar</div>
+                    <img
+                        src="./icons/dark.png"
+                        alt="icon"
+                        id="toogle-theme"
+                        class="size-4 light"
+                    />
+                </div>
+            </nav>
+
+            <!-- Main -->
+            <main class="p-5">
+                <!-- Index Content -->
+                <section
+                    class="bg-custom-white dark:bg-custom-black p-5 rounded-2xl flex flex-col gap-4"
+                >
+                    <h1>Index Content</h1>
+                </section>
+            </main>
+        </div>
 
         <!-- Sidebar -->
         <div class="sidebar hidden" id="sidebar">
@@ -130,15 +142,6 @@
                 </div>
             </aside>
         </div>
-
-        <main class="p-5">
-            <!-- Index Content -->
-            <section
-                class="bg-custom-white dark:bg-custom-black p-5 rounded-2xl flex flex-col gap-4"
-            >
-                <h1>Index Content</h1>
-            </section>
-        </main>
 
         <script src="./scripts/main.js"></script>
     </body>

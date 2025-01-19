@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Dashboard v2 - Heading</title>
+        <title>Dimboard v1 - Table</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,118 +17,155 @@
         <link rel="stylesheet" href="./styles/output.css" />
     </head>
     <body>
-        <nav class="p-5">
-            <div
-                class="bg-custom-white dark:bg-custom-black p-5 rounded-2xl flex flex-row justify-between items-center gap-4"
-            >
-                <div class="">navbar</div>
+        <div class="h-screen overflow-y-auto overscroll-auto">
+            <!-- Navbar -->
+            <nav class="p-5">
                 <div
-                    class="flex flex-row flex-wrap gap-2 w-2/3 justify-center items-center"
+                    class="bg-custom-white dark:bg-custom-black p-5 rounded-2xl flex flex-row justify-between items-center gap-4"
                 >
-                    <a
-                        href="index.html"
-                        class="btn btn-small btn-outline-primary"
-                        >Index</a
-                    >
-                    <a
-                        href="card.html"
-                        class="btn btn-small btn-outline-primary"
-                        >Card</a
-                    >
-                    <a href="table.html" class="btn btn-small btn-primary"
-                        >Table</a
-                    >
-                    <a
-                        href="button.html"
-                        class="btn btn-small btn-outline-primary"
-                        >Button</a
-                    >
-                    <a
-                        href="form.html"
-                        class="btn btn-small btn-outline-primary"
-                        >Form</a
-                    >
-                    <a
-                        href="image.html"
-                        class="btn btn-small btn-outline-primary"
-                        >Image</a
-                    >
-                    <a
-                        href="body.html"
-                        class="btn btn-small btn-outline-primary"
-                        >Text</a
-                    >
-                    <a
-                        href="heading.html"
-                        class="btn btn-small btn-outline-primary"
-                        >Heading</a
-                    >
+                    <img
+                        src="./icons/hamburger.png"
+                        alt="icon"
+                        class="size-5 p-1 bg-custom-blue rounded-md"
+                        onclick="toogleSidebar()"
+                    />
+                    <div class="">navbar</div>
+                    <img
+                        src="./icons/dark.png"
+                        alt="icon"
+                        id="toogle-theme"
+                        class="size-4 light"
+                    />
                 </div>
-                <img
-                    src="./icons/dark.png"
-                    alt="icon"
-                    id="toogle-theme"
-                    class="size-4 light"
-                />
-            </div>
-        </nav>
+            </nav>
 
-        <main class="p-5">
-            <!-- Table -->
-            <section
-                class="bg-custom-white dark:bg-custom-black p-5 rounded-2xl flex flex-col gap-4"
-            >
-                <h1>Table</h1>
+            <!-- Main -->
+            <main class="p-5">
+                <!-- Table -->
+                <section
+                    class="bg-custom-white dark:bg-custom-black p-5 rounded-2xl flex flex-col gap-4"
+                >
+                    <h1>Table</h1>
 
-                <h2>Table Auto</h2>
-                <div class="table-responsive">
-                    <table class="table-auto">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th class="w-20">Fullname</th>
-                                <th class="w-20">Email</th>
-                                <th class="w-20">Status</th>
-                                <th class="w-20">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1.</td>
-                                <td>Dimas Pondra Oktafianto</td>
-                                <td>dimas@mail.com</td>
-                                <td>Active</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <h2>Table Auto</h2>
+                    <div class="table-responsive">
+                        <table class="table-auto">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th class="w-20">Fullname</th>
+                                    <th class="w-20">Email</th>
+                                    <th class="w-20">Status</th>
+                                    <th class="w-20">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1.</td>
+                                    <td>Dimas Pondra Oktafianto</td>
+                                    <td>dimas@mail.com</td>
+                                    <td>Active</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar hidden" id="sidebar">
+            <aside>
+                <!-- Header Sidebar -->
+                <div class="header-sidebar">
+                    <h1>Dimboard</h1>
+                    <img
+                        src="./icons/close.png"
+                        alt="close-icon"
+                        class="sidebar-close-btn"
+                        onclick="toogleSidebar()"
+                    />
                 </div>
 
-                <h2>Table Fixed</h2>
-                <div class="table-responsive">
-                    <table class="table-fixed">
-                        <thead>
-                            <tr>
-                                <th>No</th>
-                                <th class="w-20">Fullname</th>
-                                <th class="w-20">Email</th>
-                                <th class="w-20">Status</th>
-                                <th class="w-20">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1.</td>
-                                <td>Dimas Pondra Oktafianto</td>
-                                <td>dimas@mail.com</td>
-                                <td>Active</td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <!-- Menu Sidebar -->
+                <div class="menu-sidebar">
+                    <h5 class="mb-2">General</h5>
+                    <ul>
+                        <li class="menu-item">
+                            <img
+                                src="./icons/home.png"
+                                alt="icon"
+                                class="icon-item"
+                            />
+                            <a href="index.html">Home</a>
+                        </li>
+                    </ul>
                 </div>
-            </section>
-        </main>
+
+                <div class="menu-sidebar">
+                    <h5 class="mb-2">Components</h5>
+                    <ul>
+                        <li class="menu-item active">
+                            <img
+                                src="./icons/settings.png"
+                                alt="icon"
+                                class="icon-item"
+                            />
+                            <a href="table.html">Table</a>
+                        </li>
+                        <li class="menu-item">
+                            <img
+                                src="./icons/image.png"
+                                alt="icon"
+                                class="icon-item"
+                            />
+                            <a href="card.html">Card</a>
+                        </li>
+                        <li class="menu-item">
+                            <img
+                                src="./icons/image.png"
+                                alt="icon"
+                                class="icon-item"
+                            />
+                            <a href="button.html">Button</a>
+                        </li>
+                        <li class="menu-item">
+                            <img
+                                src="./icons/image.png"
+                                alt="icon"
+                                class="icon-item"
+                            />
+                            <a href="image.html">Gallery</a>
+                        </li>
+                        <li class="menu-item">
+                            <img
+                                src="./icons/settings.png"
+                                alt="icon"
+                                class="icon-item"
+                            />
+                            <a href="form.html">Form</a>
+                        </li>
+                        <li class="menu-item">
+                            <img
+                                src="./icons/typography.png"
+                                alt="icon"
+                                class="icon-item"
+                            />
+                            <a href="heading.html">Heading</a>
+                        </li>
+                        <li class="menu-item">
+                            <img
+                                src="./icons/typography.png"
+                                alt="icon"
+                                class="icon-item"
+                            />
+                            <a href="body.html">Body</a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
 
         <script src="./scripts/main.js"></script>
     </body>

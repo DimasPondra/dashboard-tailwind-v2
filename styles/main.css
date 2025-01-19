@@ -114,7 +114,7 @@ h6 {
   }
 }
 .form-group {
-  @apply flex flex-col gap-2;
+  @apply flex flex-col gap-2 w-full;
 }
 .form-group.checkbox-group {
   @apply flex-row items-center;
@@ -176,19 +176,19 @@ h6 {
 }
 @layer components {
   .card {
-    @apply flex flex-col w-80 h-full rounded-lg shadow bg-custom-white dark:bg-custom-dark;
+    @apply flex flex-col w-full sm:w-80 h-full rounded-lg shadow bg-custom-white dark:bg-custom-dark;
   }
   .card .card-image {
     @apply w-full h-72 object-cover rounded-t-lg;
   }
   .card .card-image.image-full {
-    @apply h-96;
+    @apply h-96 rounded-b-lg;
   }
   .card .card-body {
     @apply flex flex-col p-6;
   }
   .card .card-body.body-blur {
-    @apply absolute bottom-0 backdrop-blur-sm text-white;
+    @apply absolute w-full bottom-0 backdrop-blur-sm text-white rounded-b-lg;
   }
   .card .card-body p {
     @apply paragraph h-24 overflow-hidden;
